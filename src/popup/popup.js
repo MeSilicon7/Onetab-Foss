@@ -12,6 +12,7 @@ async function init() {
 function setupEventListeners() {
   document.getElementById('saveAllBtn').addEventListener('click', handleSaveAllTabs);
   document.getElementById('clearAllBtn').addEventListener('click', handleClearAll);
+  document.getElementById('optionsBtn').addEventListener('click', handleOpenOptions);
 }
 
 async function handleSaveAllTabs() {
@@ -231,6 +232,10 @@ async function handleClearAll() {
     await browser.storage.local.set({ tabGroups: [] });
     await loadAndDisplayGroups();
   }
+}
+
+function handleOpenOptions() {
+  browser.runtime.openOptionsPage();
 }
 
 function escapeHtml(text) {

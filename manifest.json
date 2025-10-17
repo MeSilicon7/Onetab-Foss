@@ -27,5 +27,9 @@
       "id": "onetab-foss@example.com",
       "strict_min_version": "109.0"
     }
+  },
+  "options_ui": {
+    "page": "src/option/option.html",
+    "open_in_tab": true
   }
 }
